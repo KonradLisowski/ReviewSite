@@ -1,0 +1,108 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9f7;
+}
+
+/* Container styling */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1, h2 {
+    color: #222433;
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
+
+/* Unordered list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List styling */
+li {
+    margin-bottom: 10px; 
+    padding: 6px;
+    border: 1px solid #fff;
+    background-color: #f9f9f9f3;
+}
+
+/* Paragraph inside styling */
+li p {
+    margin: 5px 0;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Input, text, and button styling */
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #202231;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button hover styling */
+button:hover {
+    background-color: #282a31;
+}
+
+/* Edit button styling */
+.edit-button {
+    background-color: #3496d7; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Edit button hover styling */
+.edit-button:hover {
+    background-color: #287fb9;
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #e74c3c; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Delete button hover styling */
+.delete-button:hover {
+    background-color: #c0392b; 
+}
+
+/* Container styling */
+.container ul li {
+    background: #fff;
+    padding: 6px; 
+    margin-bottom: 10px; 
+    border-radius: 4px;
+}

@@ -1,0 +1,1 @@
+in visual studio code right click on index.html and open live server
