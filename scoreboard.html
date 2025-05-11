@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoreboard - Most Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  <script type="module" src="scoreboard.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Most reviews</h1>
+    <div class="nav-buttons">
+      <!-- Navigation buttons -->
+      <button onclick="window.location.href='user.html'">Home</button>
+      <button onclick="window.location.href='movies.html'">Movies</button>
+      <button onclick="window.location.href='shows.html'">Shows</button>
+      <button onclick="window.location.href='games.html'">Games</button>
+      <button onclick="window.location.href='scoreboard.html'">Scoreboard</button>
+      <button id="logoutButton" onclick="localStorage.removeItem('currentUser');window.location.href='index.html'">Logout</button>
+    </div>
+    <!-- list to display the scoreboard -->
+    <ul id="scoreboardList"></ul>
+  </div>
+</body>
+</html>

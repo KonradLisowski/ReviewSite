@@ -1,23 +1,47 @@
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
+    background: #1b1d1e !important;
+    color: #F5F6FA !important;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9f7;
+    font-family: "Roboto";
 }
 
 /* Container styling */
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    background: #252527 !important;
+    color: #F5F6FA !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 32px 24px;
+}
+
+/* Inner content box */
+.container > ul,
+.container > form,
+.container > .search-container,
+.container > .nav-buttons,
+.container > div:not(.nav-buttons):not(.search-container):not(:first-child) {
+    background: #29292B !important;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 18px;
+    color: #F5F6FA !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
 }
 
 /* Header styling */
-h1, h2 {
-    color: #222433;
+h1, h2, h3 {
+    color: #FF5050;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+}
+h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
 
 /* Form styling */
@@ -25,18 +49,39 @@ form {
     margin-bottom: 20px;
 }
 
-/* Unordered list styling */
+/* list styling */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    background: #252527 !important;
+    color: #F5F6FA !important;
+    border: 1px solid #333 !important;
 }
 
-/* List styling */
+/* List styling 2 */
 li {
-    margin-bottom: 10px; 
-    padding: 6px;
-    border: 1px solid #fff;
-    background-color: #f9f9f9f3;
+    background: #252527 !important;
+    color: #F5F6FA !important;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #333 !important;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+li:hover {
+    box-shadow: 0 6px 24px rgba(229,57,53,0.18);
+}
+li img, .recommendation-item img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    background: #1b1d1e;
+    display: block;
 }
 
 /* Paragraph inside styling */
@@ -48,61 +93,380 @@ li p {
 label {
     display: block;
     margin: 10px 0 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #FF5050;
 }
 
 /* Input, text, and button styling */
-input, textarea, button {
+input, textarea, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #1b1d1e;
+    color: #F5F6FA;
+    box-sizing: border-box;
+    transition: border 0.2s, background 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+    border: 1.5px solid #FF5050;
+    background: #252527;
+    color: #fff;
 }
 
 /* Button styling */
-button {
-    background-color: #202231;
-    color: #fff;
+button, .delete-button, .edit-button, .comment-button, .add-comment-button {
+    background: #E93835;
+    color: #F5F6FA;
     border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    margin: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button:hover, .delete-button:hover, .edit-button:hover, .comment-button:hover, .add-comment-button:hover {
+    background: #FF5050;
+    color: #fff;
 }
 
-/* Button hover styling */
-button:hover {
-    background-color: #282a31;
+/* Like/Dislike buttons */
+.like-button {
+    background-color: #1976D2;
+    color: #fff;
+}
+.like-button:hover, .like-button:focus {
+    background-color: #1565c0;
+}
+.liked {
+    background-color: #2196f3;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dislike-button {
+    background-color: #E93835;
+    color: #fff;
+}
+.dislike-button:hover, .dislike-button:focus {
+    background-color: #FF5050;
+}
+.disliked {
+    background-color: #FF5050;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Comment and Add Comment buttons */
+.comment-button, .add-comment-button {
+    background-color: #E93835;
+    color: #F5F6FA;
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-left: 0;
+}
+.comment-button:hover, .add-comment-button:hover {
+    background-color: #FF5050;
+    color: #fff;
 }
 
 /* Edit button styling */
 .edit-button {
-    background-color: #3496d7; 
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    background-color: #E93835;
 }
-
-/* Edit button hover styling */
 .edit-button:hover {
-    background-color: #287fb9;
+    background-color: #FF5050;
 }
 
 /* Delete button styling */
 .delete-button {
-    background-color: #e74c3c; 
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    background-color: #E93835;
 }
-
-/* Delete button hover styling */
 .delete-button:hover {
-    background-color: #c0392b; 
+    background-color: #FF5050;
 }
 
 /* Container styling */
 .container ul li {
-    background: #fff;
-    padding: 6px; 
-    margin-bottom: 10px; 
+    background: #f1f3f6;
+    color: #23272f;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Align checkboxes */
+#movieGenres, #tvShowGenres, #videoGameGenres {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 10px;
+    margin-bottom: 15px;
+}
+
+#movieGenres label, #tvShowGenres label, #videoGameGenres label {
+    display: contents;
+}
+
+#movieGenres input[type="checkbox"],
+#tvShowGenres input[type="checkbox"],
+#videoGameGenres input[type="checkbox"] {
+    margin: 0;
+    align-self: center;
+}
+
+.recommendation-card {
+    border: 1px solid #333 !important;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #252527 !important;
+    color: #F5F6FA !important;
+}
+.recommendation-card img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    background: transparent;
+}
+
+.search-container input {
+    flex: 1;
+    margin-bottom: 0;
+    background: #181a20;
+    color: #e3e6ed;
+    border: 1px solid #5e81ac;
+}
+
+.search-container button {
+    background: #3b4252;
+    color: #e3e6ed;
+}
+.search-container button:hover {
+    background: #5e81ac;
+    color: #fff;
+}
+
+/* Recommendation items */
+.recommendation-item {
+    border: 1px solid #333 !important;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #252527 !important;
+    color: #F5F6FA !important;
+}
+
+.recommendation-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    background: #181a20;
+    display: block;
+}
+
+/* Like/Dislike button row */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+/* Comment toggle button */
+.comment-toggle {
+    background-color: #3b4252;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.comment-toggle:hover {
+    background-color: #5e81ac;
+    color: #fff;
+}
+
+.like-percentage {
+    margin: 10px 0;
+    font-weight: 500;
+    color: #fff !important;
+}
+
+/*  comment text box*/
+textarea {
+    font-size: 14px;
+    padding: 7px;
+    min-height: 60px;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    background: #f3f3f3 !important;
+    color: #252527 !important;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background: #252527;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    padding: 12px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+    position: static;
+    top: unset;
+    z-index: unset;
+}
+.nav-buttons button {
+    background: #e93835;
+    color: #F5F6FA;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-buttons button:hover,
+.nav-buttons button.active {
+    background: #FF5050;
+    color: #fff;
+}
+
+/* Comments list */
+ul[id^="comments-"] li {
+    background: #23242b;
+    color: #e3e6ed;
+    border: 1px solid #2e3440;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border: 1.5px solid #b33a3a;
+    outline: none;
+}
+
+/* For responsive page */
+@media (max-width: 700px) {
+    .container {
+        padding: 12px 4px;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 0;
+    }
+    li {
+        padding: 14px;
+    }
+    li img {
+        max-height: 120px;
+    }
+}
+
+/* Color Palette */
+.comment-username {
+    color: #81a1c1;
+    font-weight: 600;
+}
+
+/* Comments heading */
+.comments-title, 
+h3.comments-title, 
+h2.comments-title, 
+h1.comments-title {
+    color: #fff !important;
+}
+
+/* Add Comment button */
+.add-comment-button {
+    background: #44484f !important;
+    color: #F5F6FA !important;
+}
+.add-comment-button:hover {
+    background: #5a5f67 !important;
+    color: #fff !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #252527;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 6px;
+}
+/* Edit in admin*/
+.editable {
+    display: inline-block;
+    padding: 2px 4px;
     border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.editable:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+input[data-field] {
+    margin-bottom: 8px;
+    padding: 6px;
+    font-size: 1rem;
+}
+
+/* Align remove button for removing accounts*/
+#userList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    background: #252527 !important;
+    color: #F5F6FA !important;
+    border-radius: 10px;
+    border: 1px solid #333 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+#userList li span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#userList li button {
+    margin: 0;
+    min-width: 110px;
+    font-size: 1rem;
 }

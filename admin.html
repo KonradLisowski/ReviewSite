@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel</h1>
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='admin.html'">Admin Home</button>
+      <button onclick="window.location.href='remove_accounts.html'">Remove Accounts</button>
+      <button id="logoutButton">Logout</button>
+    </div>
+
+    <!-- Add Movie Form -->
+    <form id="addMovieForm">
+      <h2>Add a Movie</h2>
+      <label for="movieTitle">Title:</label>
+      <input type="text" id="movieTitle" placeholder="Enter movie title" required>
+      <label for="movieDirector">Director:</label>
+      <input type="text" id="movieDirector" placeholder="Enter director name" required>
+      <label for="movieDescription">Description:</label>
+      <textarea id="movieDescription" placeholder="Enter movie description" required></textarea>
+      <label>Genres:</label>
+      <div id="movieGenres">
+        <label><input type="checkbox" value="Action"> Action</label>
+        <label><input type="checkbox" value="Adventure"> Adventure</label>
+        <label><input type="checkbox" value="Animation"> Animation</label>
+        <label><input type="checkbox" value="Biography"> Biography</label>
+        <label><input type="checkbox" value="Comedy"> Comedy</label>
+        <label><input type="checkbox" value="Crime"> Crime</label>
+        <label><input type="checkbox" value="Documentary"> Documentary</label>
+        <label><input type="checkbox" value="Drama"> Drama</label>
+        <label><input type="checkbox" value="Family"> Family</label>
+        <label><input type="checkbox" value="Fantasy"> Fantasy</label>
+        <label><input type="checkbox" value="History"> History</label>
+        <label><input type="checkbox" value="Horror"> Horror</label>
+        <label><input type="checkbox" value="Musical"> Musical</label>
+        <label><input type="checkbox" value="Mystery"> Mystery</label>
+        <label><input type="checkbox" value="Romance"> Romance</label>
+        <label><input type="checkbox" value="Sci-fi"> Sci-fi</label>
+        <label><input type="checkbox" value="Sport"> Sport</label>
+        <label><input type="checkbox" value="Thriller"> Thriller</label>
+        <label><input type="checkbox" value="War"> War</label>
+        <label><input type="checkbox" value="Western"> Western</label>
+      </div>
+      <label for="movieImage">Image:</label>
+      <input type="file" id="movieImage" accept="image/*" required>
+      <button type="submit">Add Movie</button>
+    </form>
+
+    <!-- Add Show Form -->
+    <form id="addTvShowForm">
+      <h2>Add a TV Show</h2>
+      <label for="tvShowTitle">Title:</label>
+      <input type="text" id="tvShowTitle" placeholder="Enter TV show title" required>
+      <label for="tvShowCreator">Creator:</label>
+      <input type="text" id="tvShowCreator" placeholder="Enter creator name" required>
+      <label for="tvShowDescription">Description:</label>
+      <textarea id="tvShowDescription" placeholder="Enter TV show description" required></textarea>
+      <label>Genres:</label>
+      <div id="tvShowGenres">
+        <label><input type="checkbox" value="Action"> Action</label>
+        <label><input type="checkbox" value="Adventure"> Adventure</label>
+        <label><input type="checkbox" value="Animation"> Animation</label>
+        <label><input type="checkbox" value="Biography"> Biography</label>
+        <label><input type="checkbox" value="Comedy"> Comedy</label>
+        <label><input type="checkbox" value="Crime"> Crime</label>
+        <label><input type="checkbox" value="Documentary"> Documentary</label>
+        <label><input type="checkbox" value="Drama"> Drama</label>
+        <label><input type="checkbox" value="Family"> Family</label>
+        <label><input type="checkbox" value="Fantasy"> Fantasy</label>
+        <label><input type="checkbox" value="History"> History</label>
+        <label><input type="checkbox" value="Horror"> Horror</label>
+        <label><input type="checkbox" value="Musical"> Musical</label>
+        <label><input type="checkbox" value="Mystery"> Mystery</label>
+        <label><input type="checkbox" value="Romance"> Romance</label>
+        <label><input type="checkbox" value="Sci-fi"> Sci-fi</label>
+        <label><input type="checkbox" value="Sport"> Sport</label>
+        <label><input type="checkbox" value="Thriller"> Thriller</label>
+        <label><input type="checkbox" value="War"> War</label>
+        <label><input type="checkbox" value="Western"> Western</label>
+      </div>
+      <label for="tvShowImage">Image:</label>
+      <input type="file" id="tvShowImage" accept="image/*" required>
+      <button type="submit">Add TV Show</button>
+    </form>
+
+    <!-- Add Video Game Form -->
+    <form id="addVideoGameForm">
+      <h2>Add a Video Game</h2>
+      <label for="videoGameTitle">Title:</label>
+      <input type="text" id="videoGameTitle" placeholder="Enter video game title" required>
+      <label for="videoGameDeveloper">Developer:</label>
+      <input type="text" id="videoGameDeveloper" placeholder="Enter developer name" required>
+      <label for="videoGameDescription">Description:</label>
+      <textarea id="videoGameDescription" placeholder="Enter video game description" required></textarea>
+      <label>Genres:</label>
+      <div id="videoGameGenres">
+        <label><input type="checkbox" value="2d"> 2d</label>
+        <label><input type="checkbox" value="Action"> Action</label>
+        <label><input type="checkbox" value="Adventure"> Adventure</label>
+        <label><input type="checkbox" value="Fighting"> Fighting</label>
+        <label><input type="checkbox" value="Horror"> Horror</label>
+        <label><input type="checkbox" value="Indie"> Indie</label>
+        <label><input type="checkbox" value="Multiplayer"> Multiplayer</label>
+        <label><input type="checkbox" value="Open-world"> Open-world</label>
+        <label><input type="checkbox" value="Platformer"> Platformer</label>
+        <label><input type="checkbox" value="Puzzle"> Puzzle</label>
+        <label><input type="checkbox" value="Racing"> Racing</label>
+        <label><input type="checkbox" value="Rhythm"> Rhythm</label>
+        <label><input type="checkbox" value="Roguelike"> Roguelike</label>
+        <label><input type="checkbox" value="RPG"> RPG</label>
+        <label><input type="checkbox" value="Sandbox"> Sandbox</label>
+        <label><input type="checkbox" value="Shooter"> Shooter</label>
+        <label><input type="checkbox" value="Simulation"> Simulation</label>
+        <label><input type="checkbox" value="Sports"> Sports</label>
+        <label><input type="checkbox" value="Strategy"> Strategy</label>
+        <label><input type="checkbox" value="Survival"> Survival</label>
+        <label><input type="checkbox" value="Visual Novel"> Visual Novel</label>
+      </div>
+      <label for="videoGameImage">Image:</label>
+      <input type="file" id="videoGameImage" accept="image/*" required>
+      <button type="submit">Add Video Game</button>
+    </form>
+
+    <!-- Admin search bar -->
+    <div class="search-container">
+      <input type="text" id="adminSearchInput" placeholder="Search by title...">
+      <button onclick="adminSearchItems()">Search</button>
+      <button onclick="clearAdminSearch()">Clear</button>
+    </div>
+
+    <!-- Movie/Show/Game list -->
+    <h2>Movies</h2>
+    <ul id="movieList"></ul>
+    <h2>TV Shows</h2>
+    <ul id="tvShowList"></ul>
+    <h2>Video Games</h2>
+    <ul id="videoGameList"></ul>
+  </div>
+</body>
+</html>

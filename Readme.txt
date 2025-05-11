@@ -1,1 +1,2 @@
+You need to open this as a live server, the easiest way to do it is by using visual sutdio code and downloading the live server addon
 in visual studio code right click on index.html and open live server

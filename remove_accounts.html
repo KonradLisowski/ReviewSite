@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Accounts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  <script type="module" src="remove_accounts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Remove Accounts</h1>
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='admin.html'">Admin Home</button>
+      <button id="logoutButton" onclick="localStorage.removeItem('currentUser');window.location.href='index.html'">Logout</button>
+    </div>
+    <!-- Search bar for finding user accounts -->
+    <input type="text" id="searchInput" placeholder="Search by username..." />
+    <!-- List to display users that can be removed -->
+    <ul id="userList"></ul>
+  </div>
+</body>
+</html>

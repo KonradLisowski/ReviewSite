@@ -3,76 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Review Site</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
-  <script type="module" src="script.js"></script> <!-- Link to the external JavaScript file with Firebase -->
+  <title>Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Review Site</h1>
-    
-    <!-- Add Movie -->
-    <form id="addMovieForm">
-      <h2>Add a Movie</h2>
-      <label for="movieTitle">Title:</label>
-      <input type="text" id="movieTitle" placeholder="Enter movie title" required>
+    <!-- Login -->
+  <div class="container" id="authContainer">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter username" required>
       
-      <label for="movieDirector">Director:</label>
-      <input type="text" id="movieDirector" placeholder="Enter director name" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter password" required>
       
-      <label for="movieDescription">Description:</label>
-      <textarea id="movieDescription" placeholder="Enter movie description" required></textarea>
-      
-      <button type="submit">Add Movie</button>
+      <button type="submit">Login</button>
     </form>
-
-    <!-- Display Movies -->
-    <div id="moviesContainer">
-      <h2>Movies</h2>
-      <ul id="movieList"></ul>
-    </div>
-
-    <!-- Add TV Show -->
-    <form id="addTvShowForm">
-      <h2>Add a TV Show</h2>
-      <label for="tvShowTitle">Title:</label>
-      <input type="text" id="tvShowTitle" placeholder="Enter TV show title" required>
+    <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+  </div>
+  <!-- Registration -->
+  <div class="container" id="registerContainer" style="display: none;">
+    <h1>Register</h1>
+    <form id="registerForm">
+      <label for="registerUsername">Username:</label>
+      <input type="text" id="registerUsername" placeholder="Enter username" required>
       
-      <label for="tvShowCreator">Creator:</label>
-      <input type="text" id="tvShowCreator" placeholder="Enter creator name" required>
+      <label for="registerPassword">Password:</label>
+      <input type="password" id="registerPassword" placeholder="Enter password" required>
       
-      <label for="tvShowDescription">Description:</label>
-      <textarea id="tvShowDescription" placeholder="Enter TV show description" required></textarea>
-      
-      <button type="submit">Add TV Show</button>
+      <button type="submit">Register</button>
     </form>
-
-    <!-- Display TV Shows -->
-    <div id="tvShowsContainer">
-      <h2>TV Shows</h2>
-      <ul id="tvShowList"></ul>
-    </div>
-
-    <!-- Add Video Game -->
-    <form id="addVideoGameForm">
-      <h2>Add a Video Game</h2>
-      <label for="videoGameTitle">Title:</label>
-      <input type="text" id="videoGameTitle" placeholder="Enter video game title" required>
-      
-      <label for="videoGameDeveloper">Developed by:</label>
-      <input type="text" id="videoGameDeveloper" placeholder="Enter developer name" required>
-      
-      <label for="videoGameDescription">Description:</label>
-      <textarea id="videoGameDescription" placeholder="Enter video game description" required></textarea>
-      
-      <button type="submit">Add Video Game</button>
-    </form>
-
-    <!-- Display Video Games -->
-    <div id="videoGamesContainer">
-      <h2>Video Games</h2>
-      <ul id="videoGameList"></ul>
-    </div>
+    <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
   </div>
 </body>
 </html>
+

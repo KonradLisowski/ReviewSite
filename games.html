@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  <script type="module" src="movie_show_game.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Video Games</h1>
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+      <button onclick="window.location.href='user.html'">Home</button>
+      <button onclick="window.location.href='movies.html'">Movies</button>
+      <button onclick="window.location.href='shows.html'">Shows</button>
+      <button onclick="window.location.href='games.html'">Games</button>
+      <button onclick="window.location.href='scoreboard.html'">Scoreboard</button>
+      <button id="logoutButton">Logout</button>
+    </div>
+    <!-- Search bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search by title...">
+      <button onclick="searchItems('videoGames')">Search</button>
+      <button onclick="clearSearch('videoGames')">Clear</button>
+    </div>
+    <ul id="videoGameList"></ul>
+  </div>
+</body>
+</html>
